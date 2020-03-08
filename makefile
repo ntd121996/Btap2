@@ -4,20 +4,21 @@ CXX = g++
 LIBS =
 CXXFLAGS = -g -Wall
 IDIR = ../$(CUR_DIR)/include
-INCLUDE_BUILD = -I$(IDIR)
-DEPS = phanso.h
-DEPS_BUILD = $(patsubst %,$(IDIR)/%,$(DEPS))
+DEBUG = ../$(CUR_DIR)/Debug
+
+INCLUDE_BUILD = -I$(IDIR) \
+-I.
 
 SOURCE_DIR = ../$(CUR_DIR)/source
 
 SOURCE = phanso.cpp main.cpp
-OBJECT = $(patsubst %.cpp,%.o,$(SOURCE))
-SOURCE_BUILD = $(patsubst %,$(SOURCE_DIR)/%,$(OBJECT))
+
+SOURCE_BUILD = $(patsubst %.cpp,$(DEBUG)/%.o,$(SOURCE))
 
 EXE = main
 REMOVE = rm -rf
 
-%.o: %.cpp $(DEPS_BUILD)
+$(DEBUG)/%.o: $(SOURCE_DIR)/%.cpp
 	$(CXX) -c $(CXXFLAGS) -o $@ $< $(INCLUDE_BUILD)
 $(EXE): $(SOURCE_BUILD)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(INCLUDE_BUILD)
@@ -29,4 +30,4 @@ run:
 
 .PHONY: clean
 clean :
-	$(REMOVE) $(SOURCE_DIR)/*.o $(EXE)
+	$(REMOVE) $(DEBUG)/*.o $(EXE)
