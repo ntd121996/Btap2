@@ -1,12 +1,10 @@
 # Btap1
-OOP - Btap ve Quan Ly Can Bo
+OOP - Btap ve Phan So
 
-    Xây dựng các lớp NhanVien, CongNhan, KySu kế thừa từ lớp CanBo
-    Xây dựng các hàm để truy nhập, hiển thị thông tin và kiểm tra về các thuộc tính của các lớp.
-    Xây dựng lớp QLCB cài đặt các phương thức thực hiện các chức sau:
+    Xây dựng lớp PhanSo với hai thuộc tính riêng xác định tử số và mẫu số của phân số và xây dựng các
+    phương thức:
 
-    Nhập thông tin mới cho cán bộ (Hỏi người dùng muốn nhập cho: công nhân, kỹ sư hay nhân viên và
-    nhập đúng thông tin cho đối tượng đó).
-    Tìm kiếm theo họ tên
-    Hiển thị thông tin về danh sách các cán bộ
-    Thoát khỏi chương trình.
+    Các toán tử tạo lập
+    Các phép toán cộng, trừ, nhân, chia hai phân số
+    Phép kiểm tra một phân số có phải tối giản hay không
+    Phép tìm dạng tối giản của phân số
