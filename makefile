@@ -1,15 +1,15 @@
-CUR_DIR = PhanSo
+CUR_DIR = ..
 CC = gcc
 CXX = g++
 LIBS =
 CXXFLAGS = -g -Wall
-IDIR = ../$(CUR_DIR)/include
-DEBUG = ../$(CUR_DIR)/Debug
+IDIR = include
+DEBUG = Debug
 
 INCLUDE_BUILD = -I$(IDIR) \
 -I.
 
-SOURCE_DIR = ../$(CUR_DIR)/source
+SOURCE_DIR = source
 
 SOURCE = phanso.cpp main.cpp
 
